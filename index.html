@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto Quinta</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      color: white;
+      text-align: center;
+      background: url('FONDO.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(6px);
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+    }
+    h2 {
+      font-size: 1.5em;
+      font-weight: normal;
+      margin-bottom: 2em;
+    }
+    .section {
+      margin: 40px auto;
+      max-width: 600px;
+    }
+    a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+    .countdown {
+      font-size: 2em;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Proyecto Quinta</h1>
+    <h2>Vení a disfrutar de un lindo día, y no seas careta :)</h2>
+
+    <div class="countdown" id="countdown"></div>
+
+    <div class="section">
+      <p><strong>Día:</strong> 24 de Enero de 2026</p>
+      <p><strong>Hora:</strong> 11:00 hs</p>
+      <p><strong>Dirección:</strong> Calle Chacabuco 1132, entre Larrea y Urquiza, Moreno – Lado Sur</p>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=Calle+Chacabuco+1132+Moreno" target="_blank">📍 Ver en Google Maps</a></p>
+      <p><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Proyecto+Quinta&details=Veni+a+disfrutar+de+un+lindo+dia&location=Calle+Chacabuco+1132+Moreno&dates=20260124T140000Z/20260124T200000Z" target="_blank">🗓️ Agendar en tu calendario</a></p>
+    </div>
+
+    <div class="section">
+      <h3>¿Qué comeremos?</h3>
+      <p><strong>Entrada:</strong> Salame y Queso</p>
+      <p><strong>Plato Principal:</strong> Bondiola braseada a la cerveza con verduras</p>
+      <p><strong>Postre:</strong> Sos bienvenido a cooperar con lo que puedas</p>
+      <p><strong>Bebida:</strong> Cada uno se responsabiliza de cómo quiera hidratarse</p>
+    </div>
+
+    <div class="section">
+      <h3>🎶 ¡Armemos la playlist!</h3>
+      <p><a href="https://open.spotify.com/playlist/4PC9G1QwvJh2bHVNOHzIBg?si=YN6oqtCAS3OloktjRhfRLg&pi=MGX6HXOJRryaJ" target="_blank">👉 Agregá tus temas acá</a></p>
+    </div>
+
+    <div class="section">
+      <h3>IMPORTANTE</h3>
+      <p>No te olvides de traer tu traje de baño y protector solar ☀️</p>
+    </div>
+  </div>
+
+  <script>
+    const countdown = document.getElementById("countdown");
+    const eventDate = new Date("2026-01-24T11:00:00");
+    function updateCountdown() {
+      const now = new Date();
+      const diff = eventDate - now;
+      if (diff <= 0) {
+        countdown.textContent = "¡Es hoy!";
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      countdown.textContent = `${days} días, ${hours} hs, ${minutes} min`;
+    }
+    setInterval(updateCountdown, 60000);
+    updateCountdown();
+  </script>
+</body>
+</html>
