@@ -7,7 +7,10 @@
   <title>Proyecto Quinta</title>
 
   <!-- Tipografía estilo invitación -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&display=swap    body {
+  https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&display=swap
+
+  <style>
+    body {
       margin: 0;
       font-family: 'Playfair Display', serif;
       color: white;
@@ -25,6 +28,8 @@
 
     /* Cada sección como “una hoja” */
     .section {
+      position: relative;    /* <- importante para stacking */
+      z-index: 1;            /* <- asegura estar “arriba” */
       background: rgba(0, 0, 0, 0.35);
       margin: 60px auto;
       padding: 40px 25px;
@@ -56,7 +61,6 @@
       font-size: 1.2em;
       line-height: 1.6em;
       margin: 8px 0;
-      /* Evita que textos largos se salgan de la “hoja” */
       word-break: keep-all;
       overflow-wrap: anywhere;
     }
@@ -65,6 +69,9 @@
       color: #ffd700;
       text-decoration: none;
       font-weight: 500;
+      display: inline-block;    /* <- mejora clic en móviles */
+      pointer-events: auto;     /* <- por si otra capa captura */
+      padding: 2px 4px;
     }
 
     .countdown {
@@ -122,13 +129,14 @@
       <p class="label">Dirección</p>
       <p class="item-text">Calle Chacabuco 1132, entre Larrea y Urquiza, Moreno – Lado Sur</p>
 
-      <!-- Links CORRECTOS (se muestra solo el texto clicable) -->
+      <!-- Sólo texto clicable (sin URL suelta) -->
       <p>
         https://www.google.com/maps/search/?api=1&amp;query=Calle+Chacabuco+1132+Moreno📍 Ver en Google Maps</a>
       </p>
 
       <p>
-        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Proyecto+Quinta&amp;details=Veni+a+disfrutar+de+un+lindo+dia&amp;location=Cabuco+1132+Moreno&amp;dates=20260124T140000Z/20260124T200000Z🗓️ Agendar en tu calendario</a>
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Proyecto+Quinta&amp;details=Veni+a+disfrutar+de+un+lindo+dia&amp;location=Calle+Chacabuco+1132+Moreno&amp;dates=20260124T140000Z/20260124T200000Z"
+          endario</a>
       </p>
     </div>
 
@@ -155,8 +163,7 @@
     <div class="section">
       <h3>🎶 ¡Armemos la playlist!</h3>
       <p>
-        <a href="https://open.spotify.com/playlist/4PC9G1QwvJh2bHVNOHzIBg"
-          cá</a>
+        https://open.spotify.com/playlist/4PC9G1QwvJh2bHVNOHzIBg👉 Agregá tus temas acá</a>
       </p>
     </div>
 
