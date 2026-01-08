@@ -28,8 +28,6 @@
 
     /* Cada sección como “una hoja” */
     .section {
-      position: relative;    /* <- importante para stacking */
-      z-index: 1;            /* <- asegura estar “arriba” */
       background: rgba(0, 0, 0, 0.35);
       margin: 60px auto;
       padding: 40px 25px;
@@ -61,17 +59,12 @@
       font-size: 1.2em;
       line-height: 1.6em;
       margin: 8px 0;
-      word-break: keep-all;
-      overflow-wrap: anywhere;
     }
 
     a {
       color: #ffd700;
       text-decoration: none;
       font-weight: 500;
-      display: inline-block;    /* <- mejora clic en móviles */
-      pointer-events: auto;     /* <- por si otra capa captura */
-      padding: 2px 4px;
     }
 
     .countdown {
@@ -97,7 +90,7 @@
       margin-bottom: 10px;
     }
 
-    /* SOLO el título "Opción Veggie" en dorado */
+    /* Solo el texto "Opción Veggie" en dorado (no toda la línea) */
     .veggie-title {
       color: #ffd700;
       font-weight: 600;
@@ -129,14 +122,17 @@
       <p class="label">Dirección</p>
       <p class="item-text">Calle Chacabuco 1132, entre Larrea y Urquiza, Moreno – Lado Sur</p>
 
-      <!-- Sólo texto clicable (sin URL suelta) -->
+      <!-- Links correctos: se ve solo el texto clicable -->
       <p>
-        https://www.google.com/maps/search/?api=1&amp;query=Calle+Chacabuco+1132+Moreno📍 Ver en Google Maps</a>
+        https://www.google.com/maps/search/?api=1&query=Calle+Chacabuco+1132+Moreno
+          📍 Ver en Google Maps
+        </a>
       </p>
 
       <p>
-        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Proyecto+Quinta&amp;details=Veni+a+disfrutar+de+un+lindo+dia&amp;location=Calle+Chacabuco+1132+Moreno&amp;dates=20260124T140000Z/20260124T200000Z"
-          endario</a>
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Proyecto+Quinta&details=Veni+a+disfrutar+de+un+lindo+dia&location=Calle+Chacabuco+1132+Moreno&dates=20260124T140000Z/20260124T200000Z"
+          r en tu calendario
+        </a>
       </p>
     </div>
 
@@ -163,7 +159,9 @@
     <div class="section">
       <h3>🎶 ¡Armemos la playlist!</h3>
       <p>
-        https://open.spotify.com/playlist/4PC9G1QwvJh2bHVNOHzIBg👉 Agregá tus temas acá</a>
+        https://open.spotify.com/playlist/4PC9G1QwvJh2bHVNOHzIBg
+          👉 Agregá tus temas acá
+        </a>
       </p>
     </div>
 
