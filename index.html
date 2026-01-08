@@ -18,7 +18,7 @@
       background-size: cover;
     }
 
-    /* Capa oscura para que el texto se lea mejor */
+    /* Capa oscura para mejorar contraste */
     .overlay {
       background-color: rgba(0, 0, 0, 0.55);
       min-height: 100vh;
@@ -71,6 +71,23 @@
       margin: 20px 0;
       font-weight: 500;
     }
+
+    /* NUEVO: Labels destacados */
+    .label {
+      font-weight: 600;
+      font-size: 1.25em;
+      letter-spacing: 0.5px;
+      color: #ffd700; /* dorado elegante */
+      display: block;
+      margin-top: 15px;
+    }
+
+    /* NUEVO: Texto descriptivo más suave */
+    .item-text {
+      font-weight: 300;
+      font-size: 1.15em;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 
@@ -88,9 +105,15 @@
     <!-- HOJA 2 -->
     <div class="section">
       <h3>Información del Evento</h3>
-      <p><strong>Día:</strong> 24 de Enero de 2026</p>
-      <p><strong>Hora:</strong> 11:00 hs</p>
-      <p><strong>Dirección:</strong> Calle Chacabuco 1132, entre Larrea y Urquiza, Moreno – Lado Sur</p>
+
+      <p class="label">Día</p>
+      <p class="item-text">24 de Enero de 2026</p>
+
+      <p class="label">Hora</p>
+      <p class="item-text">11:00 hs</p>
+
+      <p class="label">Dirección</p>
+      <p class="item-text">Calle Chacabuco 1132, entre Larrea y Urquiza, Moreno – Lado Sur</p>
 
       <p><a href="https://www.google.com/maps/search/?api=1&query=Calle+Chacabuco+1132+Moreno" target="_blank">📍 Ver en Google Maps</a></p>
 
@@ -100,10 +123,18 @@
     <!-- HOJA 3 -->
     <div class="section">
       <h3>¿Qué comeremos?</h3>
-      <p><strong>Entrada:</strong> Salame y Queso</p>
-      <p><strong>Plato Principal:</strong> Bondiola braseada a la cerveza con verduras</p>
-      <p><strong>Postre:</strong> Sos bienvenido a cooperar con lo que puedas</p>
-      <p><strong>Bebida:</strong> Cada uno se responsabiliza de cómo quiera hidratarse</p>
+
+      <p class="label">Entrada</p>
+      <p class="item-text">Salame y Queso</p>
+
+      <p class="label">Plato Principal</p>
+      <p class="item-text">Bondiola braseada a la cerveza con verduras</p>
+
+      <p class="label">Postre</p>
+      <p class="item-text">Sos bienvenido a cooperar con lo que puedas</p>
+
+      <p class="label">Bebida</p>
+      <p class="item-text">Cada uno se responsabiliza de cómo quiera hidratarse</p>
     </div>
 
     <!-- HOJA 4 -->
