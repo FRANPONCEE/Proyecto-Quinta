@@ -15,4 +15,136 @@
       color: white;
       text-align: center;
       background: url('FONDO.jpeg') no-repeat center center fixed;
-      background-size
+      background-size: cover;
+    }
+
+    /* Capa oscura para que el texto se lea mejor */
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.55);
+      min-height: 100vh;
+      padding: 60px 20px;
+    }
+
+    /* Cada sección como “una hoja” */
+    .section {
+      background: rgba(0, 0, 0, 0.35);
+      margin: 60px auto;
+      padding: 40px 25px;
+      max-width: 700px;
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
+    }
+
+    h1 {
+      font-size: 3.2em;
+      font-weight: 600;
+      margin-bottom: 0.2em;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      font-weight: 300;
+      margin-bottom: 1.5em;
+    }
+
+    h3 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6em;
+      margin: 8px 0;
+    }
+
+    a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .countdown {
+      font-size: 2em;
+      margin: 20px 0;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay">
+
+    <!-- HOJA 1 -->
+    <div class="section">
+      <h1>Proyecto Quinta</h1>
+      <h2>Vení a disfrutar de un lindo día, y no seas careta :)</h2>
+
+      <div class="countdown" id="countdown"></div>
+    </div>
+
+    <!-- HOJA 2 -->
+    <div class="section">
+      <h3>Información del Evento</h3>
+      <p><strong>Día:</strong> 24 de Enero de 2026</p>
+      <p><strong>Hora:</strong> 11:00 hs</p>
+      <p><strong>Dirección:</strong> Calle Chacabuco 1132, entre Larrea y Urquiza, Moreno – Lado Sur</p>
+
+      <p><a href="https://www.google.com/maps/search/?api=1&query=Calle+Chacabuco+1132+Moreno" target="_blank">📍 Ver en Google Maps</a></p>
+
+      <p><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Proyecto+Quinta&details=Veni+a+disfrutar+de+un+lindo+dia&location=Calle+Chacabuco+1132+Moreno&dates=20260124T140000Z/20260124T200000Z" target="_blank">🗓️ Agendar en tu calendario</a></p>
+    </div>
+
+    <!-- HOJA 3 -->
+    <div class="section">
+      <h3>¿Qué comeremos?</h3>
+      <p><strong>Entrada:</strong> Salame y Queso</p>
+      <p><strong>Plato Principal:</strong> Bondiola braseada a la cerveza con verduras</p>
+      <p><strong>Postre:</strong> Sos bienvenido a cooperar con lo que puedas</p>
+      <p><strong>Bebida:</strong> Cada uno se responsabiliza de cómo quiera hidratarse</p>
+    </div>
+
+    <!-- HOJA 4 -->
+    <div class="section">
+      <h3>🎶 ¡Armemos la playlist!</h3>
+      <p><a href="https://open.spotify.com/playlist/4PC9G1QwvJh2bHVNOHzIBg?si=YN6oqtCAS3OloktjRhfRLg&pi=MGX6HXOJRryaJ" target="_blank">👉 Agregá tus temas acá</a></p>
+    </div>
+
+    <!-- HOJA 5 -->
+    <div class="section">
+      <h3>IMPORTANTE</h3>
+      <p>No te olvides de traer tu traje de baño y protector solar ☀️</p>
+    </div>
+
+  </div>
+
+  <!-- SCRIPT DEL CONTADOR -->
+  <script>
+    const countdown = document.getElementById("countdown");
+    const eventDate = new Date("2026-01-24T11:00:00");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = eventDate - now;
+
+      if (diff <= 0) {
+        countdown.textContent = "¡Es hoy!";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      countdown.textContent = `${days} días, ${hours} hs, ${minutes} min, ${seconds} seg`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+
+</body>
+</html>
