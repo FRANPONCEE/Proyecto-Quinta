@@ -7,10 +7,7 @@
   <title>Proyecto Quinta</title>
 
   <!-- Tipografía estilo invitación -->
-  https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&display=swap
-
-  <style>
-    body {
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&display=swap    body {
       margin: 0;
       font-family: 'Playfair Display', serif;
       color: white;
@@ -59,6 +56,9 @@
       font-size: 1.2em;
       line-height: 1.6em;
       margin: 8px 0;
+      /* Evita que textos largos se salgan de la “hoja” */
+      word-break: keep-all;
+      overflow-wrap: anywhere;
     }
 
     a {
@@ -122,17 +122,13 @@
       <p class="label">Dirección</p>
       <p class="item-text">Calle Chacabuco 1132, entre Larrea y Urquiza, Moreno – Lado Sur</p>
 
-      <!-- Links corregidos -->
+      <!-- Links CORRECTOS (se muestra solo el texto clicable) -->
       <p>
-        https://www.google.com/maps/search/?api=1&amp;query=Calle+Chacabuco+1132+Moreno
-          📍 Ver en Google Maps
-        </a>
+        https://www.google.com/maps/search/?api=1&amp;query=Calle+Chacabuco+1132+Moreno📍 Ver en Google Maps</a>
       </p>
 
       <p>
-        https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Proyecto+Quinta&amp;details=Veni+a+disfrutar+de+un+lindo+dia&amp;location=Calle+Chacabuco+1132+Moreno&amp;dates=20260124T140000Z/20260124T200000Z
-          🗓️ Agendar en tu calendario
-        </a>
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Proyecto+Quinta&amp;details=Veni+a+disfrutar+de+un+lindo+dia&amp;location=Cabuco+1132+Moreno&amp;dates=20260124T140000Z/20260124T200000Z🗓️ Agendar en tu calendario</a>
       </p>
     </div>
 
@@ -159,9 +155,8 @@
     <div class="section">
       <h3>🎶 ¡Armemos la playlist!</h3>
       <p>
-        https://open.spotify.com/playlist/4PC9G1QwvJh2bHVNOHzIBg
-          👉 Agregá tus temas acá
-        </a>
+        <a href="https://open.spotify.com/playlist/4PC9G1QwvJh2bHVNOHzIBg"
+          cá</a>
       </p>
     </div>
 
