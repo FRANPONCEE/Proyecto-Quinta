@@ -19,18 +19,15 @@
       background-size: cover;
     }
 
-    /* Capa oscura para mejorar contraste */
     .overlay {
       background-color: rgba(0, 0, 0, 0.55);
       min-height: 100vh;
       padding: 60px 20px;
     }
 
-    /* Cada sección como “una hoja” */
     .section {
       background: rgba(0, 0, 0, 0.35);
-      margin: 60px auto;
-      padding: 40px 25px;
+           padding: 40px 25px;
       max-width: 700px;
       border-radius: 12px;
       backdrop-filter: blur(4px);
@@ -73,24 +70,22 @@
       font-weight: 500;
     }
 
-    /* Labels destacados */
     .label {
       font-weight: 600;
       font-size: 1.25em;
       letter-spacing: 0.5px;
-      color: #ffd700; /* dorado elegante */
+      color: #ffd700;
       display: block;
       margin-top: 15px;
     }
 
-    /* Texto descriptivo más suave */
     .item-text {
       font-weight: 300;
       font-size: 1.15em;
       margin-bottom: 10px;
     }
 
-    /* NUEVO: solo el texto "Opción Veggie" en dorado */
+    /* Solo el texto "Opción Veggie" en dorado */
     .veggie-title {
       color: #ffd700;
       font-weight: 600;
@@ -105,14 +100,12 @@
     <div class="section">
       <h1>Proyecto Quinta</h1>
       <h2>“Sumate a disfrutar un día distinto.”</h2>
-
       <div class="countdown" id="countdown"></div>
     </div>
 
     <!-- HOJA 2 -->
     <div class="section">
       <h3>Información del Evento</h3>
-
       <p class="label">Día</p>
       <p class="item-text">24 de Enero de 2026</p>
 
@@ -122,9 +115,8 @@
       <p class="label">Dirección</p>
       <p class="item-text">Calle Chacabuco 1132, entre Larrea y Urquiza, Moreno – Lado Sur</p>
 
-      <p>https://www.google.com/maps/search/?api=1&query=Calle+Chacabuco+1132+Moreno📍 Ver en Google Maps</a></p>
-
-      <p>https://calendar.google.com/calendar/render?action=TEMPLATE&text=Proyecto+Quinta&details=Veni+a+disfrutar+de+un+lindo+dia&location=Calle+Chacabuco+1132+Moreno&dates=20260124T140000Z/20260124T200000Z🗓️ Agendar en tu calendario</a></p>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=Calle+Chacabuoreno📍 Ver en Google Maps</a></p>
+      <p><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Proyecto+Quinta&details=Veni+a+disfrutar+de+un+lindo+dia&location=Calle+Chacabuco+1132+Moreno&dates=20260124T140000Z/20260124T200000Z" target calendario</a></p>
     </div>
 
     <!-- HOJA 3 -->
@@ -133,12 +125,10 @@
 
       <p class="label">Entrada</p>
       <p class="item-text">Salame y Queso</p>
-      <!-- NUEVO: línea veggie (solo el título en dorado) -->
       <p class="item-text"><strong class="veggie-title">Opción Veggie:</strong> Bruschettas con hummus y vegetales asados</p>
 
       <p class="label">Plato Principal</p>
       <p class="item-text">Bondiola braseada a la cerveza con verduras</p>
-      <!-- NUEVO: línea veggie (solo el título en dorado) -->
       <p class="item-text"><strong class="veggie-title">Opción Veggie:</strong> Risotto de hongos y espinaca</p>
 
       <p class="label">Postre</p>
@@ -182,9 +172,7 @@
       const seconds = Math.floor((diff / 1000) % 60);
 
       countdown.textContent = `${days} días, ${hours} hs, ${minutes} min, ${seconds} seg`;
-    }
-
-    setInterval(updateCountdown, 1000);
+   Countdown, 1000);
     updateCountdown();
   </script>
 
